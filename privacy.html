@@ -4,32 +4,187 @@
   <meta charset="utf-8" />
   <title>سياسة الخصوصية - Shalfa Print Helper</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: system-ui, "Segoe UI", Tajawal, sans-serif; padding: 24px; background:#f9f9fc; color:#1f2a44; }
-    h1 { margin-top:0; }
-    p { line-height:1.5; }
-    code { background:#eef; padding:2px 4px; border-radius:4px; }
-    .container { max-width:800px; margin:auto; }
+    :root {
+      --bg:#f2f6fc;
+      --card:#ffffff;
+      --radius:14px;
+      --shadow:0 20px 60px -10px rgba(31,42,68,0.08);
+      --radius-sm:8px;
+      --text:#1f2a44;
+      --muted:#697386;
+      --accent:#0f6fff;
+      --border:#e6ecfa;
+      --code-bg:#eef5ff;
+    }
+    *{box-sizing:border-box;}
+    body {
+      margin:0;
+      font-family: 'Tajawal', system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.55;
+      padding: 32px 16px;
+    }
+    .wrapper {
+      max-width: 850px;
+      margin: auto;
+      padding-bottom: 64px;
+    }
+    .header {
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      align-items:center;
+      margin-bottom:24px;
+    }
+    .title {
+      flex:1;
+      min-width:200px;
+    }
+    h1 {
+      margin:0;
+      font-size:1.9rem;
+      font-weight:700;
+    }
+    .sub {
+      margin:4px 0 0;
+      color: var(--muted);
+      font-size:0.95rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      box-shadow: var(--shadow);
+      margin-bottom:24px;
+      position:relative;
+      overflow:hidden;
+    }
+    .badge {
+      display:inline-block;
+      background: rgba(15,111,255,0.1);
+      color: var(--accent);
+      padding:4px 12px;
+      border-radius:999px;
+      font-size:0.65rem;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+    .section-title {
+      font-size:1.3rem;
+      margin:0 0 12px;
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    p { margin:12px 0; }
+    ul {
+      padding-left:1.2rem;
+      margin:8px 0 12px;
+    }
+    li {
+      margin-bottom:8px;
+    }
+    code {
+      background: var(--code-bg);
+      padding:4px 8px;
+      border-radius:6px;
+      font-size:0.9rem;
+      font-family: Consolas,monaco,monospace;
+    }
+    .small {
+      font-size:0.85rem;
+      color: var(--muted);
+    }
+    .highlight {
+      background: linear-gradient(135deg,#0f6fff20,#0f6fff00);
+      padding:8px 12px;
+      border-radius:8px;
+      margin:12px 0;
+    }
+    .footer {
+      margin-top:40px;
+      font-size:0.8rem;
+      color: var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:900px){
+      .header { flex-direction:column; align-items:flex-start; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>سياسة الخصوصية</h1>
-    <p>إضافة <strong>Shalfa Print Helper</strong> مصممة لتشغيل كامل على جهاز المستخدم، ولا تجمع أو ترسل أي بيانات شخصية أو محتوى إلى خوادم خارجية.</p>
-    <h2>ما يتم</h2>
-    <p>الإضافة تقرأ ملف Excel محلياً من جهازك، وتتحكم في صفحة الويب المفتوحة (على موقع شلفا) لإدخال بيانات وطلب طباعة. جميع العمليات تتم داخل المتصفح.</p>
-    <h2>ما لا يتم</h2>
-    <ul>
-      <li>لا تُرسل البيانات إلى أي جهة خارجية.</li>
-      <li>لا تُخزن معلومات الموظفين في سيرفر بعيد.</li>
-      <li>لا تُشارك أو تبيع أي بيانات.</li>
-    </ul>
-    <h2>صلاحيات مطلوبة</h2>
-    <p>الإضافة تطلب صلاحيات مثل الوصول إلى تبويب نشط، تنزيلات، وحقن سكربت لتمكين الأتمتة. هذه الصلاحيات تُستخدم فقط لتنفيذ وظيفة الطباعة التلقائية.</p>
-    <h2>اتصل بنا</h2>
-    <p>إذا عندك استفسار أو تواجه مشكلة: أرسل رسالة إلى المسؤول أو عبر صفحة الدعم المشار إليها في المتجر.</p>
-    <hr/>
-    <p style="font-size:0.8rem;">آخر تحديث: يوليو 2025</p>
+  <div class="wrapper">
+    <div class="header">
+      <div class="title">
+        <h1>سياسة الخصوصية</h1>
+        <div class="sub">Shalfa Print Helper - أمان وسرية، كل شيء يعمل محليًا</div>
+      </div>
+      <div>
+        <!-- ممكن تضيف لوجو هنا -->
+<img src="https://shalfa.sa/images/ShalfaLogoNewBlueLight.png" alt="Shalfa Logo" width="100" height="53" style="border-radius:8px;">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="badge">خصوصي وآمن</div>
+      <h2 class="section-title">نظرة عامة</h2>
+      <p>إضافة <strong>Shalfa Print Helper</strong> مصممة لتعمل بالكامل على جهاز المستخدم بدون إرسال أي بيانات خارجية. كل العمليات—قراءة ملف Excel، إدخال بيانات على صفحة شلفا، طباعة الملفات، وإعادة تسمية الملفات—تتم محلياً في المتصفح.</p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">ما يتم</h2>
+      <ul>
+        <li>قراءة ملف Excel من جهاز المستخدم لتحميل أرقام الموظفين.</li>
+        <li>إدخال رقم الموظف بشكل يحاكي التفاعل البشري (كيبورد/نقرة) ليُسترجَع اسم الموظف من السيرفر.</li>
+        <li>اختيار النموذج المناسب (سعودي / غير سعودي)، وتنفيذ الطباعة تلقائياً.</li>
+        <li>إعادة تسمية الملفات التي يتم تنزيلها (مثل: <code>20154.docx</code> و<code>20154-C.docx</code>).</li>
+        <li>عرض شريط تقدّم وتحديث حالة الطباعة للمستخدم.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">ما لا يتم</h2>
+      <ul>
+        <li>لا تُرسل البيانات إلى أي خدمة خارجية.</li>
+        <li>لا تُخزن بيانات الموظفين على خوادم بعيدة.</li>
+        <li>لا تُشارك أو تُبيع أي معلومات شخصية.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">الصلاحيات المطلوبة ولماذا</h2>
+      <div class="highlight">
+        <p><strong>activeTab:</strong> للوصول إلى صفحة الطباعة النشطة وتنفيذ الأتمتة (كتابة، اختيار نموذج، طباعة).</p>
+        <p><strong>scripting:</strong> لحقن السكربت في صفحة شلفا لتشغيل منطق الطباعة والتفاعل مع عناصر الصفحة.</p>
+        <p><strong>storage:</strong> لحفظ حالة التقدم (مثل آخر سجل مُعالَج) وتفضيل نوع الموظف مؤقتاً.</p>
+        <p><strong>downloads:</strong> لإعادة تسمية الملفات المنزّلة وتقديم زر فتح آخر ملف.</p>
+        <p><strong>Host permission (<code>https://shalfaerp.com/*</code>):</strong> ضرورية للتفاعل فقط ضمن نطاق الموقع المستهدف وإدخال البيانات عليه.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">إذا واجهت مشكلة</h2>
+      <p>جرب الخطوات التالية:</p>
+      <ul>
+        <li>تأكد أنك على صفحة الطباعة الصحيحة: <code>https://shalfaerp.com/Apps/HR/FormReport/Template_Print</code></li>
+        <li>أعد تحميل الصفحة أو الأضافة إذا توقف التفاعل.</li>
+        <li>جرب سجل واحد أولاً وتأكد أن رقم الموظف يُدخل ويُظهر الاسم.</li>
+        <li>افتح أدوات المطور (DevTools) وراجع الرسائل في الـ Console إذا ظهر خطأ.</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <div>آخر تحديث: يوليو 2025</div>
+      <div>كل المعالجة محلياً؛ لا يتم إرسال بيانات خارجية.</div>
+    </div>
   </div>
 </body>
 </html>
