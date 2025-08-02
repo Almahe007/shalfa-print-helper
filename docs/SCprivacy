@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>سياسة الخصوصية - حاسبة تقسيم الراتب</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#f2f6fc;
+      --card:#ffffff;
+      --radius:14px;
+      --shadow:0 20px 60px -10px rgba(31,42,68,0.08);
+      --text:#1f2a44;
+      --muted:#697386;
+      --accent:#0f6fff;
+      --border:#e6ecfa;
+      --code-bg:#eef5ff;
+    }
+    *{box-sizing:border-box;}
+    body {
+      margin:0;
+      font-family: 'Tajawal', system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.55;
+      padding: 32px 16px;
+    }
+    .wrapper {
+      max-width: 850px;
+      margin: auto;
+      padding-bottom: 64px;
+    }
+    .header {
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      align-items:center;
+      margin-bottom:24px;
+    }
+    .title {
+      flex:1;
+      min-width:200px;
+    }
+    h1 {
+      margin:0;
+      font-size:1.9rem;
+      font-weight:700;
+    }
+    .sub {
+      margin:4px 0 0;
+      color: var(--muted);
+      font-size:0.95rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      box-shadow: var(--shadow);
+      margin-bottom:24px;
+      position:relative;
+      overflow:hidden;
+    }
+    .badge {
+      display:inline-block;
+      background: rgba(15,111,255,0.1);
+      color: var(--accent);
+      padding:4px 12px;
+      border-radius:999px;
+      font-size:0.65rem;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+    .section-title {
+      font-size:1.3rem;
+      margin:0 0 12px;
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    p { margin:12px 0; }
+    ul {
+      padding-left:1.2rem;
+      margin:8px 0 12px;
+    }
+    li {
+      margin-bottom:8px;
+    }
+    code {
+      background: var(--code-bg);
+      padding:4px 8px;
+      border-radius:6px;
+      font-size:0.9rem;
+      font-family: Consolas,monaco,monospace;
+    }
+    .small {
+      font-size:0.85rem;
+      color: var(--muted);
+    }
+    .highlight {
+      background: linear-gradient(135deg,#0f6fff20,#0f6fff00);
+      padding:8px 12px;
+      border-radius:8px;
+      margin:12px 0;
+    }
+    .footer {
+      margin-top:40px;
+      font-size:0.8rem;
+      color: var(--muted);
+      text-align:center;
+    }
+    .logo-wrapper {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .logo-img {
+      width:100px;
+      height:53px;
+      border-radius:8px;
+      object-fit:contain;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+    @media (max-width:900px){
+      .header { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="title">
+        <h1>سياسة الخصوصية</h1>
+        <div class="sub">حاسبة تقسيم الراتب – آمن، سريع، كل شيء يعمل محلياً</div>
+      </div>
+      <div class="logo-wrapper">
+        <!-- نفس اللوجو بأبعاده المطلوبة -->
+        <img src="https://shalfa.sa/images/ShalfaLogoNewBlueLight.png" alt="Shalfa Logo" class="logo-img" />
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="badge">خصوصي وآمن</div>
+      <h2 class="section-title">نظرة عامة</h2>
+      <p>هذه الإضافة تحسب وتوزع الراتب بناءً على بدلات وجنسية (سعودي/غير سعودي) وتعمل بالكامل داخل متصفحك. لا تُرسل الإضافة بياناتك إلى خوادم خارجية بشكل افتراضي. كل ما تفعله هو محلي لتسهيل استخدامك وحفظ تفضيلاتك البسيطة.</p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">ما الذي يتم جمعه</h2>
+      <ul>
+        <li><strong>قالب المستخدم (اختياري):</strong> مثل إجمالي الراتب، الجنسية، وحالة اختيار بدلات السكن والنقل عند الضغط على "حفظ قالب". تُخزن هذه البيانات في <code>chrome.storage.sync</code> لتمكين استرجاعها تلقائياً لاحقاً.</li>
+        <li><strong>نتائج الحساب:</strong> تُعرض فقط في الواجهة ولا تُرسل ولا تُخزن خارجياً إلا إذا قام المستخدم بنسخها يدوياً.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">كيف نستخدم البيانات</h2>
+      <p>يُستخدم ما يُخزن فقط لتحسين تجربة المستخدم داخل الإضافة:</p>
+      <ul>
+        <li>استرجاع إعدادات القالب السابقة عند فتح الإضافة مرة أخرى.</li>
+        <li>تسهيل تكرار العمليات بدون إعادة إدخال الخيارات يدوياً.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">التخزين والأمان</h2>
+      <p>كل البيانات المخزنة تبقى داخل متصفحك باستخدام نظام Chrome Storage. لا يتم إرسال أي من هذه البيانات إلى خوادم خارجية أو طرف ثالث. لا تُستخدم بياناتك لأي غرض إعلاني أو تتبُّع.</p>
+      <p>لحذف القالب المحفوظ، يمكنك:</p>
+      <ul>
+        <li>فتح أدوات المطور (DevTools) في صفحة الإضافة ثم الذهاب إلى Application &gt; Storage وحذف المفتاح <code>salaryTemplate</code>.</li>
+        <li>أو إدخال قيم جديدة (فارغة أو مختلفة) ثم الضغط "حفظ قالب" لتبديلها.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">الحقوق والسيطرة</h2>
+      <p>أنت تتحكم بالكامل في بياناتك:</p>
+      <ul>
+        <li>يمكنك اختيار عدم حفظ أي قالب؛ فلن يُخزن شيء ما لم تضغط "حفظ قالب".</li>
+        <li>يمكنك حذف أو تعديل القالب في أي وقت بنفس الطرق المذكورة أعلاه.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">التغييرات المستقبلية</h2>
+      <p>إذا أُضيفت ميزات جديدة لاحقاً (مثل تصدير إلى Excel أو حفظ قوالب مسماة متعددة)، فسيتم تحديث هذه السياسة لتوضيح أي بيانات إضافية يتم جمعها أو استعمالها.</p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">الاتصال</h2>
+      <p>إذا كان لديك سؤال، اقتراح، أو رغبت في الإبلاغ عن خلل، يمكنك التواصل عبر البريد الخاص بالمطور في صفحة الاضافة. هذه الإضافة لا تجمع معلومات اتصال تلقائياً.</p>
+    </div>
+
+    <div class="footer">
+      <div>آخر تحديث: يوليو 2025</div>
+      <div>كل المعالجة محلياً؛ لا يتم إرسال بيانات خارجية بدون علمك.</div>
+    </div>
+  </div>
+</body>
+</html>
